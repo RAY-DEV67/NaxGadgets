@@ -83,15 +83,10 @@ export function AddProduct() {
     setloading(true)
     const docRef = await addDoc(collection(db, "Products"), {
       color: color,
-      color2: color2,
-      color3: color3,
-      color4: color4,
-      color5: color5,
       title: title,
       description: description,
       price: Number(prices),
       // userId: user?.uid,
-      AprilSales: highlight,
       category: category,
       searchKeywords:
         `${title.toLowerCase()} ${category?.toLowerCase()}`.split(
@@ -205,7 +200,7 @@ export function AddProduct() {
           <div className="flex flex-col items-center">
             <form
               onSubmit={handleSubmit}
-              className="w-[90%] bg-[#ffea00] mb-[2rem] rounded-[10px] flex flex-col px-[1rem] pb-[2.5rem]"
+              className="w-[90%] bg-[#00A0DE] mb-[2rem] rounded-[10px] flex flex-col px-[1rem] pb-[2.5rem]"
             >
                <div
                 onClick={() => {
@@ -223,20 +218,20 @@ export function AddProduct() {
                   <p
                     onClick={() => {
                       setcategories(false);
-                      setcategory("Fusion Bags");
+                      setcategory("Phones and Accessories");
                     }}
                     className="w-[100%] text-center pb-[0.5rem]"
                   >
-                    Fusion Bags
+                    Phones and Accessories
                   </p>
                   <p
                     onClick={() => {
                       setcategories(false);
-                      setcategory("Fusion Shoes");
+                      setcategory("Laptops");
                     }}
                     className="border-b-[2px] border-t-[2px] w-[100%] text-center py-[0.5rem]"
                   >
-                   Fusion Shoes
+                   Laptops
                   </p>
                 </div>
               ) : (
@@ -336,49 +331,6 @@ export function AddProduct() {
                 // {...register("title")}
               />
 
-<input
-                className="mt-[1rem] py-[0.5rem] rounded-[10px] px-[1rem]"
-                type="text"
-                placeholder="color 2"
-                name="color2"
-                onChange={(e) => {setcolor2(e.target.value)}}
-                // value={values.title}
-                // {...register("title")}
-              />
-
-              
-<input
-                className="mt-[1rem] py-[0.5rem] rounded-[10px] px-[1rem]"
-                type="text"
-                placeholder="color 3"
-                name="color3"
-                onChange={(e) => {setcolor3(e.target.value)}}
-                // value={values.title}
-                // {...register("title")}
-              />
-
-              
-<input
-                className="mt-[1rem] py-[0.5rem] rounded-[10px] px-[1rem]"
-                type="text"
-                placeholder="color 4"
-                name="color4"
-                onChange={(e) => {setcolor4(e.target.value)}}
-                // value={values.title}
-                // {...register("title")}
-              />
-
-              
-<input
-                className="mt-[1rem] py-[0.5rem] rounded-[10px] px-[1rem]"
-                type="text"
-                placeholder="color 5"
-                name="color5"
-                onChange={(e) => {setcolor5(e.target.value)}}
-                // value={values.title}
-                // {...register("title")}
-              />
-
               <textarea
                 rows="4"
                 cols="50"
@@ -390,18 +342,6 @@ export function AddProduct() {
                 // {...register("description")}
               />
               {errors.description && <p className="error">{errors.description}</p>}
-
-              <h2 className="mt-[1rem]">Anniversary Sales?</h2>
-              <div>
-                <input
-                  type="checkbox"
-                  id="Highlight"
-                  name="Highlight"
-                  className="mr-[0.5rem]"
-                  onChange={setHigh}
-                />
-                <label for="MIN">YES</label>
-              </div>
 
               <div className="relative">
                 <input
@@ -446,7 +386,7 @@ export function AddProduct() {
               <input
                 type="submit"
                 value={loading ? "Sending Product..." : "Post Ad"}
-                className="text-center bg-[#3EB812] text-white mt-[2rem] border py-[0.5rem] rounded-[10px] items-center"
+                className="text-center bg-[#00A0DE] text-white mt-[2rem] border py-[0.5rem] rounded-[10px] items-center"
               />
             </form>
           </div>

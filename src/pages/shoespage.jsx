@@ -77,7 +77,7 @@ export function ShoesPage() {
   return (
     <div>
       <div className="lg:absolute lg:top-[13%] pt-[70px] lg:left-[35%] lg:w-[60%] lg:z-[-1]">
-      <p className="mt-[rem] font-bold text-2xl text-center border-y border-[#deab24] py-[1rem]">Fusion Shoes</p>
+      <p className="mt-[rem] font-bold text-2xl text-center border-y border-[#00A0DE] py-[1rem]">Laptops</p>
         <Search />
 
         {/* <p className="w-[100%] flex flex-col items-center my-[1rem] loaderContainer">

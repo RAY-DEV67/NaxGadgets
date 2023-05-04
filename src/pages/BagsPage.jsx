@@ -78,20 +78,9 @@ export function ProductsPage() {
   return (
     <div>
       <div className="lg:absolute lg:top-[13%] pt-[70px] lg:left-[35%] lg:z-[-1] lg:w-[60%]">
-        <p className="mt-[rem] font-bold text-2xl text-center border-y border-[#deab24] py-[1rem]">Fusion Bags</p>
+        <p className="mt-[rem] font-bold text-2xl text-center border-y border-[#00A0DE] py-[1rem]">Phones and Accessories</p>
         <Search />
 
-        {/* <p className="w-[100%] flex flex-col items-center my-[1rem] loaderContainer">
-          {loading ? (
-            <img alt="Logo" className="loader mb-[-1rem]" src={logo1} />
-          ) : (
-            ""
-          )}
-        </p>
-
-        <p className="w-[100%] text-center text-2xl">
-          {empty ? "No Results Found!!" : ""}
-        </p> */}
 
         <div className="mb-[5rem]">
           <InfiniteScroll

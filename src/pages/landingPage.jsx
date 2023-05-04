@@ -5,10 +5,7 @@ import db from "../config/firebase";
 import { TopCard } from "../components/topcard";
 import { useNavigate } from "react-router-dom";
 import LoadingSpinner from "../components/spinner";
-import bag2 from "../assets/bags2.webp";
-import bag1 from "../assets/landingImage.webp";
-import shoe1 from "../assets/shoe1.webp";
-import shoe2 from "../assets/shoe2.webp";
+import nax from "../assets/naxmain.jpg";
 import { Footer } from "../components/footer";
 
 export function LandingPage() {
@@ -104,82 +101,20 @@ export function LandingPage() {
     }
   }, []);
 
-  const images = [bag1, shoe1, bag2, shoe2];
-  const [index, setindex] = useState(0);
-
-  // useEffect(() => {
-  //   const timer = setInterval(() => {
-  //     setindex((index + 1) % images.length);
-  //   }, 3000);
-
-  //   return () => clearInterval(timer);
-  // }, [index, images.length]);
 
   return (
     <div className="lg:absolute lg:left-[35%] lg:top-[12%] lg:w-[60%]">
-      <div className="relative text-left border-b border-[#deab24] rounded-b-[20px] pt-[16%] lg:pt-[8%] lg:top-[25%]">
+      <div className="relative text-left pt-[16%] lg:pt-[8%] lg:top-[25%]">
         <img
-          src={images[index]}
-          alt="Fusion Grandeur"
-          className="h-[400px] w-[100%] object-cover animate-zoom-in-fade rounded-b-[20px]"
+          src={nax}
+          alt="Nax Gadgets"
+          className=" w-[100%]"
         />
-        <div className="flex flex-col items-center justify-center w-[100vw] lg:w-[60vw] h-[88.5%] absolute top-[16%] mt-[-1.3rem] rounded-b-[20px] overLanding">
-          <p className="mx-[1rem] text-3xl text-white headingFont text-center">No 1 HANDMADE BAGS AND SHOES BRAND</p>
-          <p className="mx-[1rem] text-2xl mt-[2rem] text-white headingFont">
-            BE ELEGANT <span className="text-[#deab24]">WEAR FUSION</span>
-          </p>
-          {/* <p className="mx-[1rem] text-4xl text-[#deab24] headingFont font-bold">
-            WEAR FUSION
-          </p> */}
-        </div>
       </div>
       <Search />
-      <div className="flex justify-between p-2 px-[1.5rem] mb-[1rem] text-white bg-[#deab24] font-bold rounded-[20px] heading">
-        <h2>Anniversary Sales</h2>
-        <p
-          onClick={() => {
-            navigate("/AprilSales");
-          }}
-        >
-          See All
-        </p>
-      </div>
-
-     <div className="flex flex-col items-center">
-     <div className="w-[90%] border rounded-[15px] bg-red-500 font-bold text-white px-[0.7rem] py-[1rem]">
-          <p className="text-lg mb-[0.5rem] text-center">DISCLAIMER</p>
-          <p>
-          Sales delivery commences on the 18th - 26th of May 2023
-          </p>
-        </div>
-     </div>
-
-      <p className="w-[100%] flex flex-col items-center my-[1rem] loaderContainer">
-        {loading && <LoadingSpinner />}
-      </p>
-      <p className="w-[100%] text-center">
-        {emptysales && <p className="text-2xl">Please Check Your Network Connection</p>}
-      </p>
-
-      <div className="flex lg:flex flex-wrap gap-3 justify-center mb-[1rem]">
-        {sales.map((post, index) => {
-          return (
-            <div
-              key={index}
-              onClick={() => {
-                //   navigate(`/ThriftNg/Buy/${post.category}/${post.id}`);
-              }}
-              className="flex max-w-4xl"
-            >
-              <TopCard post={post} />
-            </div>
-          );
-        })}
-      </div>
-
-
-      <div className="flex justify-between p-2 px-[1.5rem] mb-[1rem] text-white bg-[#deab24] font-bold rounded-[20px] heading">
-        <h2>Fusion Bags</h2>
+    
+      <div className="flex justify-between p-2 px-[1.5rem] mb-[1rem] text-white bg-[#00A0DE] font-bold rounded-[20px] heading">
+        <h2>Mobile Phones and Accessories</h2>
         <p
           onClick={() => {
             navigate("/All-Bags-Products");
@@ -212,8 +147,8 @@ export function LandingPage() {
         })}
       </div>
 
-      <div className="flex font-bold justify-between p-2 px-[1.5rem] mb-[1rem] text-white bg-[#deab24] rounded-[20px]">
-        <h2>Fusion Shoes</h2>
+      <div className="flex font-bold justify-between p-2 px-[1.5rem] mb-[1rem] text-white bg-[#00A0DE] rounded-[20px]">
+        <h2>Laptops</h2>
         <p
           onClick={() => {
             navigate("/All-Shoes-Products");

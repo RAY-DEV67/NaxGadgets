@@ -15,7 +15,6 @@ import { CheckOut } from "./pages/checkout";
 import { Search } from "./components/search";
 import { SearchResult } from "./pages/searchresults";
 import { Success } from "./pages/success";
-import { April } from "./pages/aprilsales";
 import { Page404 } from "./pages/404page";
 
 export const ShowCart = React.createContext();
@@ -83,7 +82,6 @@ function App() {
                   />
                     <Route path="/Checkout/:id" element={<CheckOut />} />
                     <Route path="/Successful" element={<Success />} />
-                    <Route path="AprilSales" element={<April />} />
                     <Route
                     path="/*"
                     element={<Page404 />}

@@ -266,7 +266,7 @@ const [order, setorder] = useState("Place Order");
 
           <div className="my-[2rem] mx-[1rem]">
             <p className="text-left text-2xl">Payment Method</p>
-            <div className="border-[#deab24] border my-[1rem] p-[1rem] text-left">
+            <div className="border-[#00A0DE] border my-[1rem] p-[1rem] text-left">
               <p className="text-center text-xl mb-[0.5rem]">Direct bank transfer</p>
               <p>Make your payment directly into our bank account</p>
               <p>Account Number: 7358333128</p>
@@ -303,23 +303,23 @@ const [order, setorder] = useState("Place Order");
           <div className="flex flex-col items-center">
             <p className="text-2xl">Shipping Details</p>
 
-<form ref={form} onSubmit={sendEmail} className="w-[90%] border-[#deab24] border my-[1rem] flex flex-col px-[1rem] pb-[1rem]">
+<form ref={form} onSubmit={sendEmail} className="w-[90%] border-[#00A0DE] border my-[1rem] flex flex-col px-[1rem] pb-[1rem]">
       <label className="text-left mt-[0.5rem]">Name</label>
       <input onChange={(e) => {
 setname(e.target.value)
-      }} type="text" name="user_name" className="border-[#deab24] border py-[0.5rem] rounded-[10px] px-[1rem]" />
+      }} type="text" name="user_name" className="border-[#00A0DE] border py-[0.5rem] rounded-[10px] px-[1rem]" />
      {errors.name && <p className="error">{errors.name}</p>}
       <label className="text-left mt-[0.5rem]">Street Address</label>
       <input onChange={(e) => {
 setstreet(e.target.value)
-      }}  type="text" name="Street" className="border-[#deab24] border py-[0.5rem] rounded-[10px] px-[1rem]"/>
+      }}  type="text" name="Street" className="border-[#00A0DE] border py-[0.5rem] rounded-[10px] px-[1rem]"/>
       {errors.street && <p className="error">{errors.street}</p>}
       <label className="text-left mt-[0.5rem]">Town / City</label>
       <input
       onChange={(e) => {
         settown(e.target.value)
               }} 
-                className="py-[0.5rem] rounded-[10px] px-[1rem] border-[#deab24] border"
+                className="py-[0.5rem] rounded-[10px] px-[1rem] border-[#00A0DE] border"
                 type="text"
                 name="Town"
               />
@@ -329,7 +329,7 @@ setstreet(e.target.value)
       onChange={(e) => {
         setstate(e.target.value)
               }} 
-                className="py-[0.5rem] rounded-[10px] px-[1rem] border border-[#deab24]"
+                className="py-[0.5rem] rounded-[10px] px-[1rem] border border-[#00A0DE]"
                 type="text"
                 name="State"
               />
@@ -339,13 +339,13 @@ setstreet(e.target.value)
       onChange={(e) => {
         setnumber(e.target.value)
               }} 
-                className="py-[0.5rem] rounded-[10px] px-[1rem] border border-[#deab24]"
+                className="py-[0.5rem] rounded-[10px] px-[1rem] border border-[#00A0DE]"
                 type="text"
                 name="Phone"
               />
               {errors.phone && <p className="error">{errors.phone}</p>}
       <label className="text-left mt-[0.5rem]">Order Message ( color and quantity )</label>
-      <textarea name="message" className="border-[#deab24] border rounded-[10px]" />
+      <textarea name="message" className="border-[#00A0DE] border rounded-[10px]" />
      
      {/* {saved[0] ? <div>
    <p className="mt-[0.5rem] uppercase text-sm">Choose your preferred color for your {saved[0].title}</p>
@@ -1025,7 +1025,7 @@ setstreet(e.target.value)
 </div> : ""}
 
     <div>
-    <input type="submit" value={order} className="text-white rounded-[20px] bg-[#deab24] font-bold w-[50%] mt-[2rem] py-[0.5rem] px-[1rem]" />
+    <input type="submit" value={order} className="text-white rounded-[20px] bg-[#00A0DE] font-bold w-[50%] mt-[2rem] py-[0.5rem] px-[1rem]" />
     
         </div>
         </form>
