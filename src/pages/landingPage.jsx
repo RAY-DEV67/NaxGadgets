@@ -26,8 +26,7 @@ export function LandingPage() {
     try {
       db.collection("Products")
         .limit(10)
-        .where("category", "==", "Fusion Bags")
-        .where("AprilSales", "==", false)
+        .where("category", "==", "Phones and Accessories")
         .get()
         .then((collections) => {
           const cloths = collections.docs.map((cloths) => {
@@ -53,34 +52,7 @@ export function LandingPage() {
     try {
       db.collection("Products")
         .limit(10)
-        .where("AprilSales", "==", true)
-        .get()
-        .then((collections) => {
-          const cloths = collections.docs.map((cloths) => {
-            return { ...cloths.data(), id: cloths.id };
-          });
-          // const lastDoc = collections.docs[collections.docs.length - 1];
-          setsales(cloths);
-          // setlastDocuments(lastDoc);
-          // console.log(clothsList[0]?.phone);
-          setloading(false);
-          if (cloths.length === 0) {
-            setemptysales(true);
-          }
-        });
-    } catch (err) {
-      seterror(err);
-      console.log(err);
-    }
-  }, []);
-
-  useEffect(() => {
-    setloading(true);
-    try {
-      db.collection("Products")
-        .limit(10)
-        .where("category", "==", "Fusion Shoes")
-        .where("AprilSales", "==", false)
+        .where("category", "==", "Laptops")
         .get()
         .then((collections) => {
           const cloths = collections.docs.map((cloths) => {
